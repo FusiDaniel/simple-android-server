@@ -1,0 +1,29 @@
+{
+  "name": "simple-android-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "20"
+  },
+  "license": "ISC",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "db:dev": "prisma studio",
+    "db:update": "prisma migrate dev",
+    "docker:up": "docker compose up -d",
+    "build": "tsup src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.3",
+    "prisma": "^5.19.1",
+    "tsup": "^8.2.4",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "fastify": "^4.28.1",
+    "zod": "^3.23.8"
+  }
+}
